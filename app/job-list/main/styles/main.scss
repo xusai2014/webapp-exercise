@@ -1,0 +1,134 @@
+.num-x-right {
+  float: right;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background-color: #9395d8;
+}
+.arrowdown {
+  composes: job-circle-down from './font-style.scss';
+  padding-left: 10px;
+}
+.arrowup {
+  composes: job-circle-up from './font-style.scss';
+  padding-left: 10px;
+}
+.checkedbox {
+  composes: job-checkbox-checked from './font-style.scss';
+}
+.uncheckedbox {
+  composes: job-checkbox-unchecked from './font-style.scss';
+}
+.check-box-input {
+  display: none;
+}
+
+body {
+  background-color: #4a5f84;
+  font-size: 20px;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  .emptybtn {
+    float: right;
+    border-width: 0;
+    border-radius: 2px;
+    border-color: #4a5f84;
+    &:hover,
+    &:focus {
+      background-color: #a068cc;
+    }
+  }
+  .title {
+    font-size: large;
+    font-weight: bold;
+  }
+}
+
+.treeul {
+  margin: 5px 0 5px -20px;
+  list-style: none;
+  li {
+    max-width: 800px;
+    padding: 5px 10px;
+  }
+}
+
+.checkicon {
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  margin: 5px 10px 5px 5px;
+  background: #f00;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  transform: rotate(45deg);
+  &::after {
+    display: block;
+    width: 20px;
+    height: 5px;
+    background: #f00;
+    transform: rotate(-90deg) translateY(-50%) translateX(50%);
+    content: '/';
+  }
+}
+.uncheckicon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+}
+.expandup {
+  position: relative;
+  margin: 0 5px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #4a5f84;
+    content: ' ';
+  }
+  &::before {
+    top: 0;
+    border-bottom-color: #fff;
+  }
+}
+.expanddown {
+  position: relative;
+  margin: 0 5px;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 5px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top: 10px solid #4a5f84;
+    content: ' ';
+  }
+  &::before {
+    top: 9px;
+    border-top-color: #fff;
+  }
+}
+
+:global {
+  .text-padding {
+    display: inline-flex;
+    width: 60%;
+    padding: 0 10px 0 10px;
+  }
+
+  .num-right {
+    float: right;
+  }
+}
+

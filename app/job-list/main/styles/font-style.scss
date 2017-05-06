@@ -1,0 +1,41 @@
+@font-face {
+  font-family: jobList;
+  src: url('../assets/jobList.eot');
+  src:
+    url('../assets/jobList.eot') format('embedded-opentype'),
+    url('../assets/jobList.ttf') format('truetype'),
+    url('../assets/jobList.woff') format('woff'),
+    url('../assets/jobList.svg') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+[class^='job-'],
+[class*=' job-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: jobList !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+
+  speak: none;
+}
+
+.job-circle-up::before {
+  content: '\ea41';
+}
+.job-circle-down::before {
+  content: '\ea43';
+}
+.job-checkbox-checked::before {
+  content: '\ea52';
+}
+.job-checkbox-unchecked::before {
+  content: '\ea53';
+}
