@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox } from './Checkbox';
 import styles from '../styles/main.scss';
-import { _ } from 'lodash';
+import * as _  from 'lodash';
 
 export class ChildCheckboxs extends React.Component {
 
